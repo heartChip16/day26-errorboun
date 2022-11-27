@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { Component } from 'react';
 import CounterReducer from './CounterReducer';
+import ContextEx from './ContextEx';
 
 class ErrorBoundary extends Component {
   state = { error: null };
@@ -66,11 +67,12 @@ function App() {
   return (
     <ErrorBoundary FallbackComponent={AppLevelFallbackComponent}>
       <div className="App">
-        {/* <ErrorBoundary FallbackComponent={FallbackComponent}>
-          <Breaker />
+        <ErrorBoundary FallbackComponent={FallbackComponent}>
+          {/* <Breaker /> */}
+          <ContextEx />
         </ErrorBoundary>
-        <AnotherComponent /> */}
-        <CounterReducer />
+        {/* <AnotherComponent /> */}
+        {/* <CounterReducer /> */}
       </div>
     </ErrorBoundary>
   )
